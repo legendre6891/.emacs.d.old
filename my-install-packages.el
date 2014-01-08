@@ -8,57 +8,20 @@
 
 (when (not package-archive-contents)
   (package-refresh-contents))
-(setq my-packages
-      '(color-theme-sanityinc-tomorrow
-	base16-theme
-	paredit
-	undo-tree
-	yasnippet
-	ido-ubiquitous
-	;; latex-pretty-symbols
-	latex-extra
-	smex
-	key-chord
-	multiple-cursors
-	noctilux-theme
-	litable
-	auto-complete
-	scala-mode2
-	haskell-mode
-	undo-tree
-	ido-vertical-mode
-	flx
-	flx-ido
-	ujelly-theme
-	soothe-theme
-	espresso-theme
-	expand-region
-	magit
-	ace-jump-mode
-	iy-go-to-char
-	coffee-mode
-	color-theme-railscasts
-	color-theme-sanityinc-solarized
-	geiser
-	sass-mode
-	scss-mode
-	sublime-themes
-	evil
-	autopair
-        better-defaults
-        evil-matchit
-        evil-leader
-        flatland-theme
-        evil-tabs
-        evil-nerd-commenter
-        ido-vertical-mode
-        ample-theme
-        smart-mode-line
-        cider
-        auto-complete
-        ac-nrepl
-        discover
-	))
+(setq my-packages '(ac-nrepl ace-jump-mode ample-theme
+auto-complete autopair base16-theme better-defaults cider
+clojure-mode coffee-mode color-theme-railscasts color-theme
+color-theme-sanityinc-solarized color-theme-sanityinc-tomorrow
+discover espresso-theme evil-leader evil-matchit
+evil-nerd-commenter evil-tabs elscreen evil expand-region
+flatland-theme flx-ido flx geiser goto-chg haskell-mode
+ido-ubiquitous ido-vertical-mode iy-go-to-char key-chord
+latex-extra auctex litable magit git-rebase-mode git-commit-mode
+makey multiple-cursors noctilux-theme org paredit pkg-info epl
+popup sass-mode haml-mode scala-mode2 scss-mode smart-mode-line
+smartparens dash cl-lib smex soothe-theme sublime-themes surround
+ujelly-theme undo-tree yasnippet zenburn-theme))
+	
 
 (dolist (package my-packages)
   (when (not (package-installed-p package))
